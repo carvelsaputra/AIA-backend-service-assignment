@@ -1,6 +1,6 @@
 const PublicImageController = require("../app/controllers/PublicImageController")
 
 module.exports = function(router) {
-    router.get("/", PublicImageController.index);
+    router.get("/public-image", PublicImageController.index);
 }
   
