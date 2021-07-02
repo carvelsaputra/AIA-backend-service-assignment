@@ -1,0 +1,29 @@
+{
+  "name": "aia-backend-service-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carvelsaputra/AIA-backend-service-assignment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carvelsaputra/AIA-backend-service-assignment/issues"
+  },
+  "homepage": "https://github.com/carvelsaputra/AIA-backend-service-assignment#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "xml2json": "^0.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}
