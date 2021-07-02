@@ -1,7 +1,7 @@
 const express = require("express");
 const plugins = require("./plugins");
 const routers = require("./routes");
-
+const alias = require("module-alias/register")
 const app = express();
 const port = process.env.APP_PORT;
 

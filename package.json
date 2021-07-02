@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "_moduleAliases": {
+    "@": "./src"
+  },
   "scripts": {
     "serve": "nodemon ./src/server.js"
   },
@@ -21,6 +24,7 @@
     "axios": "^0.21.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "module-alias": "^2.2.2",
     "xml2json": "^0.12.0"
   },
   "devDependencies": {
