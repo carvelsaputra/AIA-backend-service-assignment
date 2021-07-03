@@ -6,17 +6,18 @@ module.exports = class PublicImageController {
     let request = await axios.get("photos_public.gne");
     let result = request.data;
 
-    let list = result.items.map((row) => {
-      // const filename = path.basename(row.media.m);
-      let image;
-      axios.get(row.media.m, { responseType: "arraybuffer" }).then((res) => {
-        image = Buffer.from(res.data, "binary").toString("base64");
-        row.media.photo = image;
-
-        console.log(row);
+    let list = result.items.map(async (row) => {
+      let responseImage = await axios.get(row.media.m, {
+        responseType: "arraybuffer",
       });
+      row.media.photo = Buffer.from(responseImage.data, "binary").toString(
+        "base64"
+      );
       return row;
     });
-    res.send(list);
+
+    axios.all(list).then((list) => {
+      res.send(list);
+    });
   }
 };
