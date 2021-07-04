@@ -1,5 +1,5 @@
 const supertest = require("supertest");
-const app = require("./server");
+const app = require("../server");
 
 describe("GET /api/public-image", () => {
   test("should respond with a status code 200", async () => {
@@ -19,7 +19,7 @@ describe("GET /api/public-image", () => {
         );
       });
   });
-  test("should specify json in the content type header", async () => {
+  test("should have data public-image at body", async () => {
     await supertest(app)
       .get("/api/public-image")
       .then((res) => {
