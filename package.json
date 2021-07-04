@@ -7,11 +7,18 @@
     "@": "./src"
   },
   "scripts": {
-    "serve": "nodemon ./src/server.js"
+    "serve": "nodemon ./src/server.js",
+    "test": "cross-env NODE_ENV=test jest --testTimeout=10000"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/carvelsaputra/AIA-backend-service-assignment.git"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -28,6 +35,9 @@
     "module-alias": "^2.2.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.9"
+    "cross-env": "^7.0.3",
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.9",
+    "supertest": "^6.1.3"
   }
 }

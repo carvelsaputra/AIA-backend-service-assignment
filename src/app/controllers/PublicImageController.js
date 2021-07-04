@@ -1,5 +1,4 @@
 const axios = require("../../plugins/axios");
-const path = require("path");
 // const fs = require("fs");
 module.exports = class PublicImageController {
   static async index(req, res) {
@@ -24,9 +23,8 @@ module.exports = class PublicImageController {
       );
       return row;
     });
-
     axios.all(list).then((list) => {
-      res.send(list);
+      res.status(200).send(list);
     });
   }
 };
