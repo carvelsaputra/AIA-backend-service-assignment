@@ -1,8 +1,10 @@
 const express = require("express");
+
 const plugins = require("./plugins");
 const routers = require("./routes");
-const alias = require("module-alias/register");
+
 const app = express();
+
 app.use(plugins.cors());
 app.use((_, res, next) => {
   res.setHeader(
@@ -19,4 +21,5 @@ routers.api(app);
 app.listen(port, () => {
   console.log(`Server running at port: ${port}`);
 });
+
 module.exports = app;

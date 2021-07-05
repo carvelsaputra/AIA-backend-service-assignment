@@ -3,11 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "_moduleAliases": {
-    "@": "./src"
-  },
   "scripts": {
-    "start": "node src/server.js",
     "serve": "nodemon ./src/server.js",
     "test": "cross-env NODE_ENV=test jest --testTimeout=10000"
   },
@@ -32,8 +28,7 @@
     "axios": "^0.21.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "module-alias": "^2.2.2"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
